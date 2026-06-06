@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AJIO Products</title>
+
+<link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        AJIO
+    </div>
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="cart.html">Cart</a>
+    </div>
+
+</nav>
+
+<h1 class="title">
+    Our Products
+</h1>
+
+<div class="product-container">
+
+    <div class="product-card">
+
+        <img src="./Images/dainty.png">
+
+        <h3>Sneakers</h3>
+
+        <p>₹1999</p>
+
+        <button onclick="addToCart('./Images/dainty.png','Sneakers',1999)">
+            Add To Cart
+        </button>
+
+    </div>
+
+    <div class="product-card">
+
+        <img src="./Images/dainty2.png">
+
+        <h3>Slippers</h3>
+
+        <p>₹999</p>
+
+        <button onclick="addToCart('./Images/dainty2.png','Slippers',999)">
+            Add To Cart
+        </button>
+
+    </div>
+
+    <div class="product-card">
+
+        <img src="./Images/dainty3.png">
+
+        <h3>Casual Shoes</h3>
+
+        <p>₹1499</p>
+
+        <button onclick="addToCart('./Images/dainty3.png','Casual Shoes',1499)">
+            Add To Cart
+        </button>
+
+    </div>
+
+    <div class="product-card">
+
+        <img src="./Images/dainty4.png">
+
+        <h3>Sport Shoes</h3>
+
+        <p>₹2499</p>
+
+        <button onclick="addToCart('./Images/dainty4.png','Sport Shoes',2499)">
+            Add To Cart
+        </button>
+
+    </div>
+
+</div>
+
+<script src="products.js"></script>
+
+</body>
+</html>

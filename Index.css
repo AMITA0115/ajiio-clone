@@ -1,0 +1,1326 @@
+*{
+    margin :0;
+    padding:0;
+    font-family: Arial;
+    box-sizing: border-box;
+    
+}
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+.top-nav{
+    width: 100%;
+    height: 35px;
+    background: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 60px;
+    /* border-bottom: 1px solid #ddd; */
+}
+.top-right{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.top-right a{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    font-weight: 500;
+}
+.top-right a:hover{
+    color:#866628;
+}
+.top-right button{
+    background: black;
+    color: white;
+    border:none;
+    padding:7px 12px;
+    font-size : 11px;
+    cursor: pointer;
+}
+
+.navbar{
+    height:110px;
+    /* width: 100%; */
+    background-color: #fff;
+    border-top: 3px solid #2c4152;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: space-evenly; */
+    border-bottom: 1px solid #ddd;
+    /* padding:0 30px; */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+}
+.nav-main{
+    height:75px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    gap:35px;
+    padding:0 40px;
+
+}
+
+.nav-logo{
+    height:50px;
+    width: 100px;
+}
+.logo{
+    
+    font-size: 52px;
+    font-weight: 550;
+    letter-spacing: 3px;
+    cursor: pointer;
+    color: #2c4152;
+}
+.men-border,.women-border,.kids-border,.beauty-border,.home-kitchen-border{
+   font-size: 14px;
+   font-weight: 500;
+   cursor: pointer;
+   transition: 0.3s;
+}
+.nav-search{
+    height:35px;
+    width: 250px;
+    border:1px solid #d6c48f;
+    border-radius: 25px;
+    background-color: #fff7dc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 15px;
+    margin-left: auto;
+}
+.search-input{
+    width:85%;
+    
+    border:none;
+    outline:none;
+    background-color: transparent;
+    font-size: 14px;
+}
+.search-icon{
+    font-size: 14px;
+    color: #866628;
+    cursor: pointer;
+}
+.wishlist-border,
+.cart-border{
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.cart-border{
+    position: relative;
+}
+
+#cart-count{
+    position: absolute;
+
+    top: -5px;
+    right: -5px;
+
+    width: 18px;
+    height: 18px;
+
+    color:white;
+    background-color:red;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2px;
+    
+}
+
+/* ************ Men Dropdown *************** */
+
+.men-border{
+    position: relative;
+}
+
+.men{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+.men i{
+    font-size:11px;
+    transition:0.3s;
+}
+
+.men-border:hover .men i{
+    transform:rotate(180deg);
+}
+
+.mega-menu{
+    position:absolute;
+
+    top:48px;
+    left:-120px;
+
+    width:1200px;
+
+    background:#fff;
+
+    display:flex;
+
+    border:1px solid #ddd;
+
+    box-shadow:0 6px 20px rgba(0,0,0,0.12);
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(15px);
+
+    transition:0.3s ease;
+
+    
+}
+
+.men-border:hover .mega-menu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.mega-sidebar{
+    width:220px;
+
+    background:#f7f7f7;
+
+    padding:25px 20px;
+
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.mega-sidebar h4{
+    color:#999;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.mega-sidebar a{
+    text-decoration:none;
+    color:#333;
+    font-size:14px;
+}
+
+.active-link{
+    color:#866628 !important;
+    font-weight:600;
+}
+
+.mega-content{
+    flex:1;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:40px;
+
+    padding:25px 35px;
+}
+
+.mega-column{
+    display:flex;
+    flex-direction:column;
+}
+
+.mega-column h4{
+    font-size:15px;
+    color:#222;
+    margin-bottom:12px;
+    margin-top:10px;
+}
+
+.mega-column a{
+    text-decoration:none;
+    color:#444;
+    margin-bottom:8px;
+    font-size:14px;
+}
+
+.mega-column a:hover{
+    color:#866628;
+}
+
+/* ************ Hero Section ******************* */
+
+
+.hero-section{
+    width: 100%;
+    /* display: flex;
+    justify-content: center; */
+    margin-top: 10px;
+}
+
+.hero-slider{
+    width: 86%;
+    height: 430px;
+    /* margin:50px auto; */
+    margin:50px auto;
+    position: relative;
+    overflow: hidden;
+    /* border-radius: 10px; */
+}
+.slide{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.8s  ease;
+    transform: scale(1.05);
+}
+.slide-active{
+    opacity: 1;
+    transform: scale(1);
+}
+.prev,.next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: black;
+    color: white;
+    border:none;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    z-index: 100;
+}
+.prev{
+    left:10px;
+
+}
+.next{
+    right:10px;
+}
+.dots{
+    position: absolute;
+    bottom:15px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    gap:8px;
+}
+.dot{
+    width: 25px;
+    height: 8px;
+    border-radius: 20px;
+    background: white;
+    border:1px solid black;
+    cursor: pointer;
+}
+.active-dot{
+    background: black;
+}
+
+/* **************** Cards section css  ************** */
+
+
+.Cards-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.card-offer{
+    width: 100%;
+    height: 100px;
+    margin:5px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    position:absolute;
+    opacity: 0;
+    transition: 1s;
+}
+.card-active{
+   opacity: 1; 
+}
+.pre,.nex{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: black;
+    color: white;
+    border:none;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    z-index: 100;
+}
+.pre{
+    left:10px;
+}
+.nex{
+    right:10px;
+}
+.dotss{
+    position: absolute;
+    bottom:15px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    gap:8px ;
+}
+.card-dot {
+    width: 25px;
+    height: 8px;
+    border-radius: 20px;
+    background: white;
+    border:1px solid black;
+    cursor: pointer;
+}
+.dotss-active{
+    background: black;
+}
+
+/* *************** Fahion Header ***************** */
+
+.fashion-header{
+    width: 100%;
+    padding:40px 60px;
+    background: #f5f5f5;
+    margin: 0;
+}
+
+.fashion-header h1{
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 35px;
+    font-weight: 700;
+    color: #111;
+    
+  
+    
+    
+}
+.fashion-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:20px;
+}
+.fashion{
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.fashion img{
+    width: 100%;
+    display: block;
+}
+.fashion:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+/* ************** Paytm Section ********************* */
+.paytm{
+    width: 100%;
+    margin: 20px auto;
+    background-color: #f5f5f5;
+}
+.paytm-assured{
+    /* background-color: grey; */
+
+    /* border-radius: 5px; */
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    /* transition: 0.4s ease; */
+}
+.paytm-assured img{
+    width: 100%;
+    display: block;
+    /* transition: 0.4s ease; */
+    transition-duration: 2s;
+
+}
+.paytm-assured :hover{
+    transform:scale(1.01);
+   
+}
+
+/* **************** Men Section ******************* */
+
+.mens-section{
+    width: 100%;
+    margin:40px 0;
+    padding: 0 20px;
+}
+.mens-section h2{
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 25px;
+    color: #111;
+    text-decoration: none;
+    border-bottom: none;
+}
+.men-slider{
+    width: 86%;
+    height: 450px;
+    margin:50px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.men-slide{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    position: absolute;
+
+    opacity: 0;
+    transform: scale(1.03);
+
+    transition: all 0.8s ease;
+}
+.men-active{
+    opacity: 1;
+    transform: scale(1);
+}
+.men-prev,
+.men-next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    background: black;
+    color: white;
+
+    cursor: pointer;
+    z-index: 100;
+}
+.men-prev{
+    left: 10px;
+}
+
+.men-next{
+    right: 10px;
+}
+.men-dots{
+    position: absolute;
+    bottom: 15px;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.men-dot{
+    width: 25px;
+    height: 8px;
+
+    border-radius: 20px;
+
+    background: white;
+    border: 1px solid black;
+
+    cursor: pointer;
+}
+
+.active-men-dot{
+    background: black;
+}
+
+/* ************* Women Section **************** */
+.women-section{
+    width: 100%;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.women-section h2{
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 25px;
+    color: #111;
+    text-decoration: none;
+}
+
+.women-slider{
+    width: 86%;
+    height: 450px;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.women-slide{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    position: absolute;
+
+    opacity: 0;
+    transform: scale(1.03);
+
+    transition: all 0.8s ease;
+}
+
+.women-active{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+.women-prev,
+.women-next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    background: black;
+    color: white;
+
+    cursor: pointer;
+    z-index: 100;
+}
+
+.women-prev{
+    left: 10px;
+}
+
+.women-next{
+    right: 10px;
+}
+
+
+
+.women-dots{
+    position: absolute;
+    bottom: 15px;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.women-dot{
+    width: 25px;
+    height: 8px;
+
+    border-radius: 20px;
+
+    background: white;
+    border: 1px solid black;
+
+    cursor: pointer;
+}
+
+.active-women-dot{
+    background: black;
+}
+
+/* *************** points section ***************** */
+
+.points-section{
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.points-banner{
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.points-banner img{
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.points-banner:hover img{
+    transform: scale(1.01);
+}
+
+
+
+/* *************** WESTERNWEAR SECTION **************** */
+
+.western-section{
+    width: 100%;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.western-section h2{
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    color: #111;
+}
+
+.western-cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 18px;
+}
+
+.western-card{
+    background: #f7f2e9;
+    overflow: hidden;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.western-card img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.western-card:hover{
+    transform: translateY(-4px);
+}
+.shop-btn{
+    text-align:center;
+    margin-top:30px;
+}
+
+.shop-btn button{
+    padding:12px 30px;
+    border:none;
+    background:#2c4152;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+
+
+/* *************** DAINTY FOOTWEAR SECTION **************** */
+
+.dainty-section{
+    width: 100%;
+    margin: 50px 0;
+    padding: 0 20px;
+}
+
+.dainty-section h2{
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    color: #111;
+}
+
+.dainty-cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 18px;
+}
+
+.dainty-card{
+    background: #f7f2e9;
+    overflow: hidden;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dainty-card img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.dainty-card:hover{
+    transform: translateY(-4px);
+}
+
+.dainty-info{
+    padding: 10px 14px 14px;
+}
+
+.dainty-info h3{
+    font-size: 15px;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 6px;
+}
+
+.dainty-info p{
+    font-size: 32px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1;
+}
+
+
+/* *************** Ethnicwear SECTION **************** */
+
+.ethnicwear-section{
+    width: 100%;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.ethnicwear-section h2{
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    color: #111;
+}
+
+.ethnic-cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 18px;
+}
+
+.ethnic-card{
+    background: #f7f2e9;
+    overflow: hidden;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ethnicwear-card img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.ethnic-card:hover{
+    transform: translateY(-4px);
+}
+
+/* AJIO CARES */
+.ajio-cares {
+    
+    background: #20374c;
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+    border-top: 2px solid #c9b37d;
+    border-bottom: 2px solid #c9b37d;
+  }
+  
+  .ajio-cares h2 {
+    color: #c9b37d;
+    font-size: 42px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
+  
+  .ajio-cares p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 5px 0;
+  }
+  
+  /* FOOTER */
+  .footer {
+    background: #2c4257;
+    color: #fff;
+    padding: 50px 80px 30px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .footer-column {
+    min-width: 200px;
+  }
+  
+  .footer-column h3 {
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.617);
+  }
+  
+  .footer-column a {
+    display: block;
+    color: rgba(255, 255, 255, 0.673);
+    text-decoration: none;
+    margin-bottom: 12px;
+    font-size: 10px;
+  }
+  
+  .footer-column a:hover {
+    color: #fff;
+  }
+  
+  .footer hr {
+    margin: 40px 0;
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.3);
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .payment h4,
+  .secure h4 {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #f0f0f0bd;
+  }
+  
+  .payment-icons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .payment-icons span,
+  .secure span {
+    font-size: 15px;
+    color: #f0f0f0bd;
+  }
+
+
+  /* ********************SignUp ****************** */
+  .signup-modal{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,0.6);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:99999;
+}
+
+.signup-box{
+
+    width:420px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:10px;
+
+    position:relative;
+}
+
+.close-btn{
+
+    position:absolute;
+
+    right:20px;
+    top:15px;
+
+    font-size:24px;
+
+    cursor:pointer;
+}
+
+.signup-box h2{
+
+    color:#2c4152;
+
+    margin-bottom:5px;
+}
+
+.sub-title{
+
+    margin-bottom:20px;
+
+    color:#666;
+}
+
+.signup-box input{
+
+    width:100%;
+
+    padding:12px;
+
+    margin:10px 0;
+
+    border:1px solid #ddd;
+
+    outline:none;
+}
+
+.gender-box{
+
+    display:flex;
+
+    gap:20px;
+
+    margin:12px 0;
+}
+
+.otp-text{
+
+    font-size:12px;
+
+    color:#666;
+
+    margin-top:8px;
+}
+
+.terms{
+
+    font-size:12px;
+
+    color:#666;
+
+    margin:15px 0;
+}
+
+.signup-box button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    background:#2c4152;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:600;
+}
+
+/* ******** OTP SECTION ******** */
+
+.otp-section{
+    display: none;
+    margin-top: 20px;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 20px;
+}
+
+.demo-otp{
+    background-color: #fff7dc;
+    border: 1px solid #d6c48f;
+    color: #866628;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+#generatedOtp{
+    color: #2c4152;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+#otpInput{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+#otpInput:focus{
+    border-color: #866628;
+    box-shadow: 0 0 5px rgba(134,102,40,0.3);
+}
+
+#verifyOtpBtn{
+    width: 100%;
+    padding: 14px;
+    background-color: #2c4152;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#verifyOtpBtn:hover{
+    background-color: #1d2f3d;
+    transform: translateY(-2px);
+}
+#sendOtpBtn{
+    width: 100%;
+    padding: 14px;
+    background-color: #2c4152;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#sendOtpBtn:hover{
+    background-color: #1d2f3d;
+    transform: translateY(-2px);
+}
+  
+  /******************************* Responsive ********************************* */
+
+
+  /* *********** for tablet *************** */
+
+  @media (max-width: 1024px){
+
+    .nav-main{
+        gap:15px;
+        padding:0 20px;
+    }
+
+    .logo{
+        font-size:42px;
+    }
+
+    .men-border,
+    .women-border,
+    .kids-border,
+    .beauty-border,
+    .home-kitchen-border{
+        font-size:12px;
+    }
+
+    .nav-search{
+        width:180px;
+    }
+
+    .fashion-cards,
+    .western-cards,
+    .dainty-cards,
+    .ethnic-cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .hero-slider,
+    .men-slider,
+    .women-slider{
+        width:95%;
+        height:350px;
+    }
+
+    .fashion-header h1,
+    .mens-section h2,
+    .women-section h2,
+    .western-section h2,
+    .dainty-section h2,
+    .ethnicwear-section h2{
+        font-size:32px;
+    }
+}
+
+/* ************ for mobile ****************** */
+
+@media (max-width:768px){
+
+    .navbar{
+        height:auto;
+    }
+
+    .top-nav{
+        justify-content:center;
+        padding:10px;
+        height:auto;
+    }
+
+    .top-right{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
+    }
+
+    .nav-main{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+        padding:15px;
+        height:auto;
+    }
+
+    .logo{
+        font-size:38px;
+    }
+
+    .nav-search{
+        width:100%;
+        max-width:350px;
+        margin-left:0;
+        order:10;
+    }
+
+    .hero-slider,
+    .men-slider,
+    .women-slider{
+        width:100%;
+        height:250px;
+        margin:20px auto;
+    }
+
+    .fashion-cards,
+    .western-cards,
+    .dainty-cards,
+    .ethnic-cards{
+        grid-template-columns:1fr;
+    }
+
+    .fashion-header{
+        padding:20px;
+    }
+
+    .fashion-header h1,
+    .mens-section h2,
+    .women-section h2,
+    .western-section h2,
+    .dainty-section h2,
+    .ethnicwear-section h2{
+        font-size:26px;
+    }
+
+    .dainty-info p{
+        font-size:24px;
+    }
+
+    .prev,
+    .next,
+    .pre,
+    .nex,
+    .men-prev,
+    .men-next,
+    .women-prev,
+    .women-next{
+        width:30px;
+        height:30px;
+    }
+
+    .ajio-cares h2{
+        font-size:28px;
+    }
+
+    .ajio-cares p{
+        font-size:12px;
+    }
+    .mega-menu{
+        display:none;
+    }
+}
+
+/* *********** for small mobile******** */
+
+@media (max-width:480px){
+
+    .logo{
+        font-size:32px;
+    }
+
+    .top-right a{
+        font-size:11px;
+    }
+
+    .top-right button{
+        font-size:10px;
+        padding:6px 10px;
+    }
+
+    .hero-slider,
+    .men-slider,
+    .women-slider{
+        height:180px;
+    }
+
+    .fashion-header h1,
+    .mens-section h2,
+    .women-section h2,
+    .western-section h2,
+    .dainty-section h2,
+    .ethnicwear-section h2{
+        font-size:22px;
+    }
+
+    .footer{
+        padding:30px 15px;
+    }
+
+    .footer-column{
+        min-width:100%;
+    }
+    .mega-menu{
+        display:none;
+    }
+}
+
+
+
